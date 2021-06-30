@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./Dictionary.css";
 import axios from "axios";
+import Results from "./Results";
 
 export default function Dictionary(){
 let [word, setWord] = useState("");
+let [results, setResults] = useState(null);
 
 function handleApiResponse(response){
-    console.log(response.data[0])
+    setResults(response.data[0])
 }
 
 function handleSubmitWord(event){
@@ -29,6 +31,7 @@ function handleWordUpdate(event){
         <input type="search" placeholder="Name your word" autoFocus={true} onChange={handleWordUpdate} />
         <input type="submit" value="Search 🧐🤔🔍" />
     </form>
+    <Results data={results} />
 </div>
 
     )
