@@ -1,0 +1,16 @@
+.Phonetic {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.Phonetic i {
+    border : 1px solid #ddd;
+    border-radius: 24px;
+    font-size: 22px;
+    margin-right: 12px;
+    padding: 8px;
+}
+
+.Phonetic p {
+    display: inline;
+}

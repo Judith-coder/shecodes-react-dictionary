@@ -1,4 +1,5 @@
 import React from "react";
+import "./Phonetic.css";
 
 export default function Phonetic(props){
 function handleClick(){
@@ -9,8 +10,8 @@ function handleClick(){
     if (props.phonetic){
         return (
             <div className="Phonetic">
-                <p>{props.phonetic.text}</p>
-                <i className="fas fa-headphones" onClick={handleClick} />
+                <i className="fas fa-headphones" onClick={handleClick} /><p>{props.phonetic.text}</p>
+                
             </div>
         )
     } else {

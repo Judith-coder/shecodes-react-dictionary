@@ -1,0 +1,24 @@
+.definition{
+    font-size: 15px;
+    margin-top: 24px;
+    margin-bottom: 6px;
+}
+
+.definition-example {
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.Synonyms ul{
+    font-size: 14px;
+    list-style: none;
+    padding: 0;
+}
+
+.Synonyms li{
+    display: inline-block;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
