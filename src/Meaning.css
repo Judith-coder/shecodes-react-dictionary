@@ -22,3 +22,31 @@
     margin-left: 12px;
 }
 
+/* ------- RESPONSIVE DESIGN ----------- */
+
+/*  RESPONSIVE DESIGN (large cell phones) */
+@media screen and (max-width: 425px) {
+  .definition{
+    font-size: 13px;
+}
+.definition-example {
+    font-size: 11px;
+}
+.Synonyms ul{
+    font-size: 11px;
+}
+}
+
+/*  RESPONSIVE DESIGN (narrow cell phones) */
+@media screen and (max-width: 350px) {
+    .definition{
+    font-size: 12px;
+}
+    .definition-example {
+    font-size: 11px;
+}
+    .Synonyms ul{
+    font-size: 11px;
+}
+}
+

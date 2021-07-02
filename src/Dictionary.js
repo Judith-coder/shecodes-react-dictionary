@@ -2,19 +2,27 @@ import React, { useState } from "react";
 import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 
 export default function Dictionary(){
 let [word, setWord] = useState("");
 let [results, setResults] = useState(null);
+let [photos, setPhotos] = useState(null);
 
 function handleApiResponse(response){
     setResults(response.data[0])
 }
 
+function handlePexelsApiResponse(response){
+    setPhotos(response.data.photos);
+}
+
 function handleSubmitWord(event){
     event.preventDefault();
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`
-    console.log(apiUrl);
+
+    let pexelsApiKey = '563492ad6f91700001000001a25d320f01e34eb1811e6fb4d795f2c6';
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=12`;
 
     // Check if the URL is valid
     var request = new XMLHttpRequest();
@@ -25,7 +33,8 @@ function handleSubmitWord(event){
         alert(`I did not understand "${word}", please re-type your word! 🙂`);
         window.location.reload();
       } else {
-        axios.get(apiUrl).then(handleApiResponse)
+        axios.get(apiUrl).then(handleApiResponse);
+        axios.get(pexelsApiUrl, { headers: {"Authorization" : `Bearer ${pexelsApiKey}`}}).then(handlePexelsApiResponse);
       }
  };
 
@@ -48,6 +57,7 @@ function handleWordUpdate(event){
     <p className="hints">Suggested words: wine, travel, art</p>
     </section>
     <Results data={results} />
+    <Photos photos={photos} />
 </div>
 
     )

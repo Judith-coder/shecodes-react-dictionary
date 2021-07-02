@@ -7,7 +7,6 @@
     padding: 4px;
 }
 
-
 h3 {
     font-size: 32px;
     font-weight: bold;
@@ -17,4 +16,34 @@ h3 {
 
 h4 {
     color: #5456F1;
+}
+
+/* ------- RESPONSIVE DESIGN ----------- */
+
+/*  RESPONSIVE DESIGN (large cell phones) */
+@media screen and (max-width: 425px) {
+    .Results {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+  
+}
+
+/*  RESPONSIVE DESIGN (narrow cell phones) */
+@media screen and (max-width: 350px) {
+    .Results {
+        margin: 24px 15px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    h4 {
+        font-size: 15px;
+    }
 }

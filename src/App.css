@@ -45,3 +45,39 @@ footer a:hover{
 #content-wrap {
   padding-bottom: 2.5rem;
 }
+
+/* ------- RESPONSIVE DESIGN ----------- */
+
+/*  RESPONSIVE DESIGN (large cell phones) */
+@media screen and (max-width: 425px) {
+  h1{
+    font-size: 60px;
+    margin: 38px;
+  }
+
+  footer {
+    font-size: 9px;
+    height:2rem;
+  }
+
+  #content-wrap {
+  padding-bottom: 2rem;
+} 
+}
+
+/*  RESPONSIVE DESIGN (narrow cell phones) */
+@media screen and (max-width: 350px) {
+  h1{
+    font-size: 48px;
+    margin: 32px;
+  }
+
+  footer {
+    font-size: 8px;
+    height:1.5rem;
+  } 
+
+  #content-wrap {
+  padding-bottom: 1.5rem;
+}
+}

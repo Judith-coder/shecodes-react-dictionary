@@ -9,8 +9,37 @@
     font-size: 22px;
     margin-right: 12px;
     padding: 8px;
+    transition: 150ms ease-in-out;
+}
+
+.Phonetic i:hover {
+    border : 1px solid black;
+    color: #61B0EE;
+    cursor: pointer;
 }
 
 .Phonetic p {
     display: inline;
+}
+
+/* ------- RESPONSIVE DESIGN ----------- */
+
+/*  RESPONSIVE DESIGN (large cell phones) */
+@media screen and (max-width: 425px) {
+  .Phonetic p {
+    font-size: 16px;
+}
+.Phonetic i {
+    font-size: 16px;
+}
+}
+
+/*  RESPONSIVE DESIGN (narrow cell phones) */
+@media screen and (max-width: 350px) {
+  .Phonetic p {
+    font-size: 15px;
+}
+.Phonetic i {
+    font-size: 14px;
+}
 }

@@ -8,7 +8,8 @@ section {
     padding: 24px 24px 18px 24px;
 }
 
-section#section-searchEngine {
+section#section-searchEngine,
+section.Photos {
     border: 1px solid orange;
     margin: 48px 100px;
     padding: 24px 24px 12px 24px;
@@ -48,4 +49,68 @@ p.hints {
     font-size: 13px;
     margin-top: 6px;
     margin-left: 6px;
+}
+
+/* ------- RESPONSIVE DESIGN ----------- */
+
+/*  RESPONSIVE DESIGN (large cell phones) */
+@media screen and (max-width: 425px) {
+  section {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+section#section-searchEngine,
+section.Photos {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+#input-search {
+    font-size: 14px;
+}
+
+#input-word {
+    font-size: 14px;
+}
+
+p.hints {
+    font-size: 12px;
+}
+  
+}
+
+/*  RESPONSIVE DESIGN (narrow cell phones) */
+@media screen and (max-width: 350px) {
+  section {
+    margin-right: 13px;
+    margin-left: 13px;
+}
+
+section#section-searchEngine,
+section.Photos {
+    margin: 24px 13px;
+    padding: 18px 15px 0px 15px;
+}
+
+h2 {
+    font-size: 14px;
+}
+
+#input-search {
+    font-size: 13px;
+    width: 82px;
+}
+
+#input-word {
+    font-size: 13px;
+}
+
+p.hints {
+    font-size: 11px;
+}
 }
